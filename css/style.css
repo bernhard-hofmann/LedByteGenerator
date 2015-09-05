@@ -1,0 +1,30 @@
+p {
+	font-family: Courier new, sans-serif;
+}
+span {
+	cursor:pointer;
+}
+.led {
+	border:1px solid silver;
+border-radius:13px;
+	width:26px;
+	height:26px;
+	display:inline-block;
+}
+.on {
+	background-color:red;
+}
+.bulkSelector {
+  width:26px;
+	height:26px;
+	border:1px solid black;
+	background-color:grey;
+	display:inline-block;
+	text-align:center;
+	vertical-align:center;
+	font-family:Verdana,Sans-Serif;
+}
+.selected {
+	background-color:black;
+	color:white;
+}
