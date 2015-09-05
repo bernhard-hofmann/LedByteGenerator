@@ -7,16 +7,18 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
+<div>
+<div class="app">
 	<table>
 		<tr>
-			<td><span class="bulkSelector column" id="col1">V</span></td>
-			<td><span class="bulkSelector column" id="col2">V</span></td>
-			<td><span class="bulkSelector column" id="col3">V</span></td>
-			<td><span class="bulkSelector column" id="col4">V</span></td>
-			<td><span class="bulkSelector column" id="col5">V</span></td>
-			<td><span class="bulkSelector column" id="col6">V</span></td>
-			<td><span class="bulkSelector column" id="col7">V</span></td>
-			<td><span class="bulkSelector column" id="col8">V</span></td>
+			<td><span class="bulkSelector column" id="col1"></span></td>
+			<td><span class="bulkSelector column" id="col2"></span></td>
+			<td><span class="bulkSelector column" id="col3"></span></td>
+			<td><span class="bulkSelector column" id="col4"></span></td>
+			<td><span class="bulkSelector column" id="col5"></span></td>
+			<td><span class="bulkSelector column" id="col6"></span></td>
+			<td><span class="bulkSelector column" id="col7"></span></td>
+			<td><span class="bulkSelector column" id="col8"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="1_1"></span></td>
@@ -27,7 +29,7 @@
 			<td><span class="led" id="1_6"></span></td>
 			<td><span class="led" id="1_7"></span></td>
 			<td><span class="led" id="1_8"></span></td>
-			<td><span class="bulkSelector row" id="row1">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row1"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="2_1"></span></td>
@@ -38,7 +40,7 @@
 			<td><span class="led" id="2_6"></span></td>
 			<td><span class="led" id="2_7"></span></td>
 			<td><span class="led" id="2_8"></span></td>
-			<td><span class="bulkSelector row" id="row2">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row2"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="3_1"></span></td>
@@ -49,7 +51,7 @@
 			<td><span class="led" id="3_6"></span></td>
 			<td><span class="led" id="3_7"></span></td>
 			<td><span class="led" id="3_8"></span></td>
-			<td><span class="bulkSelector row" id="row3">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row3"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="4_1"></span></td>
@@ -60,7 +62,7 @@
 			<td><span class="led" id="4_6"></span></td>
 			<td><span class="led" id="4_7"></span></td>
 			<td><span class="led" id="4_8"></span></td>
-			<td><span class="bulkSelector row" id="row4">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row4"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="5_1"></span></td>
@@ -71,7 +73,7 @@
 			<td><span class="led" id="5_6"></span></td>
 			<td><span class="led" id="5_7"></span></td>
 			<td><span class="led" id="5_8"></span></td>
-			<td><span class="bulkSelector row" id="row5">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row5"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="6_1"></span></td>
@@ -82,7 +84,7 @@
 			<td><span class="led" id="6_6"></span></td>
 			<td><span class="led" id="6_7"></span></td>
 			<td><span class="led" id="6_8"></span></td>
-			<td><span class="bulkSelector row" id="row6">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row6"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="7_1"></span></td>
@@ -93,7 +95,7 @@
 			<td><span class="led" id="7_6"></span></td>
 			<td><span class="led" id="7_7"></span></td>
 			<td><span class="led" id="7_8"></span></td>
-			<td><span class="bulkSelector row" id="row7">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row7"></span></td>
 		</tr>
 		<tr>
 			<td><span class="led" id="8_1"></span></td>
@@ -104,12 +106,22 @@
 			<td><span class="led" id="8_6"></span></td>
 			<td><span class="led" id="8_7"></span></td>
 			<td><span class="led" id="8_8"></span></td>
-			<td><span class="bulkSelector row" id="row8">&lt;</span></td>
+			<td><span class="bulkSelector row" id="row8"></span></td>
 		</tr>
 	</table>
-	<p id="bytes"></p>
-	<button type="button" id="clearAll">Clear All</button>
-	<button type="button" id="setAll">Set All</button>
+	<div>
+		<span id="bytes"></span>
+		<br/>
+		<input type="text" id="clippy" style="width:1px" />
+		<button type="button" id="copy" style="	margin-left: -10px;">Copy</button>
+	</div>
+	<div style="padding-top:5px;">
+		<button type="button" id="clearAll">Clear All</button>
+		<button type="button" id="setAll">Set All</button>
+	</div>
+</div>
+</div>
+
 	<script src="js/zepto.min.js"></script>
 	<script src="js/app.js"></script>
 </body>

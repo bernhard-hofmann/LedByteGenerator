@@ -22,6 +22,7 @@ function showBytes() {
 	}
 
 	$('#bytes').text(byteArray);
+	$('#clippy').val(byteArray);
 }
 
 function setAll(checked) {
@@ -83,6 +84,18 @@ $('#clearAll').click(function(){
 
 $('#setAll').click(function(){
 	setAll(true);
+	$('.bulkSelector').addClass('selected');
+});
+
+$('#copy').click(function(){
+	var copyTextinput = document.querySelector('#clippy');
+	copyTextinput.select();
+
+	try {
+		var successful = document.execCommand('copy');
+	} catch (err) {
+		console.log('Oops, unable to copy');
+	}
 });
 
 // Initialisation
