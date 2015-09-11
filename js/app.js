@@ -51,12 +51,12 @@ $('.led').click(function() {
 });
 
 $('.bulkSelector').click(function() {
-  var id;
+	var id;
 	var $button = $(this);
 	var offset = $button.prop('id').substr(3);
 
 	for (var led=1; led<=8; led++) {
-  	if ($button.hasClass('column')) {
+		if ($button.hasClass('column')) {
 			id = '#'+led+'_'+offset;
 		} else {
 			id = '#'+offset+'_'+led;
@@ -96,6 +96,58 @@ $('#copy').click(function(){
 	} catch (err) {
 		console.log('Oops, unable to copy');
 	}
+});
+
+$('#shiftLeft').click(function() {
+	for (var col=1; col<=8; col++) {
+		for (var row=1; row<=8; row++) {
+			if (col < 8 && $('#'+row+'_'+(col+1)).hasClass('on')) {
+				$('#'+row+'_'+col).addClass('on');
+			} else {
+				$('#'+row+'_'+col).removeClass('on');
+			}
+		}
+	}
+	showBytes();
+});
+
+$('#shiftRight').click(function() {
+	for (var col=8; col>=1; col--) {
+		for (var row=1; row<=8; row++) {
+			if (col > 1 && $('#'+row+'_'+(col-1)).hasClass('on')) {
+				$('#'+row+'_'+col).addClass('on');
+			} else {
+				$('#'+row+'_'+col).removeClass('on');
+			}
+		}
+	}
+	showBytes();
+});
+
+$('#shiftUp').click(function() {
+	for (var row=1; row<=8; row++) {
+		for (var col=1; col<=8; col++) {
+			if (row < 8 && $('#'+(row+1)+'_'+col).hasClass('on')) {
+				$('#'+row+'_'+col).addClass('on');
+			} else {
+				$('#'+row+'_'+col).removeClass('on');
+			}
+		}
+	}
+	showBytes();
+});
+
+$('#shiftDown').click(function() {
+	for (var row=8; row>=1; row--) {
+		for (var col=1; col<=8; col++) {
+			if (row > 1 && $('#'+(row-1)+'_'+col).hasClass('on')) {
+				$('#'+row+'_'+col).addClass('on');
+			} else {
+				$('#'+row+'_'+col).removeClass('on');
+			}
+		}
+	}
+	showBytes();
 });
 
 // Initialisation

@@ -42,3 +42,13 @@ table {
 .column.selected {
 	background-image:url(icons/down-on.png);
 }
+
+#controlPad img {
+	border:1px solid #333;
+	padding:2px;
+	border-radius:3px;
+	vertical-align:bottom;
+}
+#controlPad button {
+	height:22px;
+}
