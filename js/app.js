@@ -150,5 +150,18 @@ $('#shiftDown').click(function() {
 	showBytes();
 });
 
+$('#yingyang').click(function(){
+	for (var row=1; row<=8; row++) {
+		for (var col=1; col<=8; col++) {
+			if ($('#'+row+'_'+col).hasClass('on')) {
+				$('#'+row+'_'+col).removeClass('on');
+			} else {
+				$('#'+row+'_'+col).addClass('on');
+			}
+		}
+	}
+	showBytes();
+});
+
 // Initialisation
 showBytes();
